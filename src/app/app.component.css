@@ -1,0 +1,14 @@
+.app {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+
+app-content {
+  flex: 1 0 auto;
+}
+
+app-footer {
+  flex-shrink: 0;
+  background: #eee;
+}

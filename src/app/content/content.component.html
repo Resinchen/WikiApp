@@ -1,0 +1,8 @@
+  <div class="searchResultBox">
+    <ol class="searchResult">
+      <li *ngFor="let item of wikiService.getData()">
+        <a href="{{ item.link }}" target="_blank">{{ item.name }}</a>
+        <p>{{ item.snippet }}</p>
+      </li>
+    </ol>
+</div>

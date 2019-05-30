@@ -1,0 +1,9 @@
+<div class="searchField">
+    <input type="text" [(ngModel)] = "searchQuery" ng-minlength="1" placeholder="Введите запрос">
+    <button class="showMoreBtn" (click)="showMoreSearch()">{{ showMoreBtnTxt }}</button>
+    <div class="moreInfo" *ngIf="showMore">
+        <label for="count">Кол-во результатов: </label>
+        <input name="count" type="number" [(ngModel)]="searchCount" min="1">
+    </div>
+    <button class="searchBtn" (click)="getSearchResult()">Найти</button>
+</div>
