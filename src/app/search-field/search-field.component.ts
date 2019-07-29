@@ -19,8 +19,8 @@ export class SearchFieldComponent implements OnInit {
   getSearchResult = () => this.wikiService
     .getSearchResult(this.searchQuery, this.searchCount)
     .subscribe(
-      value => this.wikiService.data = this.prepareDataList(value),
-      error => console.error(error.message)
+      (      value: Object | string[][]) => this.wikiService.data = this.prepareDataList(value),
+      (      error: { message: any; }) => console.error(error.message)
     )
 
   showMoreSearch = () => {
